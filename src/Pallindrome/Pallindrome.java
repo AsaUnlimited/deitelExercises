@@ -1,7 +1,5 @@
 package Pallindrome;
 
-import java.util.Scanner;
-
 public class Pallindrome {
 
     private boolean result;

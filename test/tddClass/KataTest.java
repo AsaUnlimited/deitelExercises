@@ -5,7 +5,7 @@ package tddClass;
 import chapterThree.Kata;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 // import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class KataTest {
@@ -90,5 +90,42 @@ public class KataTest {
         }
     }
 
+    @Test
+    public void testForEvenNumber(){
+        Kata evenTest = new Kata();
+        boolean result = evenTest.isEven(6);
+        assertTrue(result);
+    }
+
+    @Test
+    public void testForOddNumber(){
+        Kata oddTest = new Kata();
+        boolean result = oddTest.isEven(3);
+        assertFalse(result);
+    }
+
+
+    @Test
+    public void testForBiggestNumber(){
+        Kata biggestNumber = new Kata();
+        int result = biggestNumber.largestNum(2,3,6,9,10);
+        assertEquals(10, result);
+    }
+
+    @Test
+    public void testForNumberFactors(){
+        Kata numFactors = new Kata();
+        int result = numFactors.numberFactorsCheck(49);
+        assertEquals(3,result);
+    }
+
+    @Test
+    public void testForPrimeNumber(){
+        Kata primeNum = new Kata();
+        primeNum.primeNumberCheck(29);
+
+    }
+
 }
+
 
